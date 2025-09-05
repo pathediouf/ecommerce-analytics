@@ -192,5 +192,5 @@ if __name__=="__main__":
     # dossier_source = f"{RAW_DATA_DIR}/clients/2024/5"
     # dossier_destination = f"{CLEANED_DATA_DIR}/clients/2024/"
     # nettoyer_fichier_csv(dossier_source,dossier_destination)
-     # calcul_stock_journalier_magasins("2024-05-03")
-     calcul_stock_journalier_db("2024-05-03")
+    calcul_stock_journalier_magasins("2024-05-03")
+    # calcul_stock_journalier_db("2024-05-03")

@@ -174,13 +174,13 @@ def calcul_stock_journalier_magasins(date : datetime) :
     print(df_final.head(10))
 
 # calcul du stock journalier pour le site e-commerce
-"""def calcul_stock_journalier_db(date: datetime, db_path: str = "ecommerce_orders_may2024.db", table_name: str = "ecommerce_orders"):
+def calcul_stock_journalier_db(date: datetime, db_path: str = "ecommerce_orders_may2024.db", table_name: str = "ecommerce_orders"):
     conn = sqlite3.connect(db_path)
     try:
         df = pd.read_sql_query(f"SELECT sum(quantity), product_name FROM {table_name} where order_date = {date} group by product_name", conn)
     finally:
         conn.close()
-    return(df.head())"""
+    return(df.head())
 
 
 
@@ -193,4 +193,4 @@ if __name__=="__main__":
     # dossier_destination = f"{CLEANED_DATA_DIR}/clients/2024/"
     # nettoyer_fichier_csv(dossier_source,dossier_destination)
     calcul_stock_journalier_magasins("2024-05-03")
-    # calcul_stock_journalier_db("2024-05-03")
+    calcul_stock_journalier_db("2024-05-03")
